@@ -1,4 +1,5 @@
-# alice
+Alice for Freeswitch
+====================
 
 TODO: Write a description here
 
@@ -9,7 +10,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      alice:
-       github: andrius/alice
+       github: ctiapps/alice-freeswitch
    ```
 
 2. Run `shards install`
@@ -17,7 +18,7 @@ TODO: Write a description here
 ## Usage
 
 ```crystal
-require "alice"
+require "alice/freeswitch"
 ```
 
 TODO: Write usage instructions here
