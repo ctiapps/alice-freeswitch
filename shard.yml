@@ -1,0 +1,9 @@
+name: alice
+version: 0.1.0
+
+authors:
+  - Andrius Kairiukstis <k@andrius.mobi>
+
+crystal: 0.31.1
+
+license: MIT

@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  alice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - FS_ESL_HOST=freeswitch
+      - FS_ESL_PORT=8021
+      - FS_ESL_PASSWORD=d8a209b7fad483528ed382cc62f532c9
+    volumes:
+      - .:/src
+
+  freeswitch:
+    image: andrius/freeswitch:1.10.x
+    volumes:
+      - ./spec/freeswitch/configs/event_socket.conf.xml:/etc/freeswitch/autoload_configs/event_socket.conf.xml
+    environment:
+      - FS_ESL_LISTEN=0.0.0.0
+      - FS_ESL_PORT=8021
+      - FS_ESL_PASSWORD=d8a209b7fad483528ed382cc62f532c9
